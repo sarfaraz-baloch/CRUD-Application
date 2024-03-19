@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+div{
+    width: 50%;
+    border: 2px solid red;
+    margin:50px auto;
+}
+
+input{
+    margin: 20px 20px;
+    padding: 20px;
+    width: 30%;
+}
+
+button{
+    margin: 20px auto;
+    padding: 20px;
+    width: 20%;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+
+li{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+li h3{
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+li button{
+    width: 10%;
+    margin: 10px;
+}
+
+
+
+
+</style>
+<body>
+    
+    <div>
+
+        <input type="text" id="input" placeholder="write a prompt">
+        <button id="addbtn">ADD </button>
+    </div>
+
+    <div>
+        <ul id="ul">
+        <li>
+            <h3>NAMES</h3>
+            <button onclick="Edititem(this)">Edit</button>
+            <button id="remove"  onclick="removeitem(this)" >Remove</button>
+        </li>
+        </ul>
+    </div>
+
+ <script src="./index.js"></script>   
+</body>
+</html>
