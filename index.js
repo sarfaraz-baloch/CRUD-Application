@@ -59,18 +59,33 @@ function removeitem(currentelement) {
   
 }
 
-function Edititem(e){
- let btn = e.previousElementSibling
- let h2 = btn.textContent
- let input2 = document.createElement("input")
- input2.type = "text"
- h2 = input2
- console.log(e.parentElement.replaceChlid( input2,btn  ))
+function Edititem(currentbtn){
+    
+  if(currentbtn.textContent == "save"){
+       currentbtn.textContent = "edit"
+       let resverseinput = currentbtn.previousElementSibling
+       let inputvalue = resverseinput.value
+       let h4 = document.createElement("h4")
+       h4.textContent = inputvalue
+       currentbtn.parentElement.replaceChild( h4,resverseinput)
+  }else{
+   currentbtn.textContent = "save"
+   
+   let h3 = currentbtn.previousElementSibling
+   let h3value = h3.textContent
+   let newInput = document.createElement("input")
+   newInput.classList.add("input-java")
+   newInput.type = "text"
+   newInput.value = h3value
 
+   currentbtn.parentElement.replaceChild(newInput, h3)
+  }
+
+}
 
 
 //  console.log(h2)
-}
+
 
 
 
